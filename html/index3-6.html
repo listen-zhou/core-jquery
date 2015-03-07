@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>设置获取元素的值val</title>
+    <script language="javascript" type="text/javascript" src="../jquery/jquery-1.6.4.min.js"></script>
+    <style type="text/css">
+        body{font-size: 12px;text-align: center}
+        div{padding: 3px;margin: 3px;width:120px;float:left;}
+        .txt{border: #666 1px solid; padding: 3px}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("select").change(function() {
+                var strSelect = $("select").val().join(",");
+                $("#p1").html(strSelect)
+            });
+            $("input").change(function() {
+                var strText = $("input").val();
+                $("#p2").html(strText)
+            });
+            $("input").focus(function() {
+                $("input").val("");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <select multiple="multiple" style="height: 96px; width: 85px;">
+            <option value="1">Item 1</option>
+            <option value="2">Item 1</option>
+            <option value="3">Item 1</option>
+            <option value="4">Item 1</option>
+            <option value="5">Item 1</option>
+            <option value="6">Item 1</option>
+            <option value="7">Item 1</option>
+        </select>
+        <p id="p1"></p>
+    </div>
+
+    <div>
+        <input type="text" class="txt"/>
+        <p id="p2"></p>
+    </div>
+</body>
+</html>

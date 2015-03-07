@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jquery基本过滤选择器</title>
+    <script language="javascript" type="text/javascript" src="../jquery/jquery-1.6.4.min.js"></script>
+    <style type="text/css">
+        body {
+            font-size: 12px;
+            text-align: center
+        }
+
+        .clsFrame {
+            width: 300px;
+            height: 100px
+        }
+
+        .DefClass, .NotClass {
+            height: 23px;
+            width: 60px;
+        }
+
+        .GetFocus {
+            width: 238px;
+            height: 23px;
+            line-height: 23px;
+        }
+
+        #spanMove {
+            width: 58px;
+            border: solid 1px #666;
+            background-color: #eee;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("li:first").addClass("GetFocus");
+            $("li:last").addClass("GetFocus");
+            $("li:not(.NotClass)").addClass("GetFocus");
+            $("li:even").addClass("GetFocus");
+            $("#spanMove").show(6000);
+        });
+    </script>
+</head>
+<body>
+<div class="clsFrame">
+    <h1>基本过滤选择器</h1>
+    <ul>
+        <li class="DefClass">item 0</li>
+        <li class="DefClass">item 1</li>
+        <li class="DefClass">item 2</li>
+        <li class="NotClass">item 3</li>
+        <li class="DefClass">item 4</li>
+    </ul>
+    <span id="spanMove" style="display: none;">Span Move</span>
+</div>
+</body>
+</html>

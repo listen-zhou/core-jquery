@@ -5,16 +5,15 @@ Transitional//EN"
 <head>
     <title>第一个简单的jQuery程序</title>
     <script language="javascript" type="text/javascript" src="../jquery/jquery-1.6.4.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            alert("您好！ 欢迎来到jQuery世界");
-        })
-        $(function(){
-            alert("@@您好！ 欢迎来到jQuery世界");
-        })
-    </script>
 </head>
 <body>
-
+<a id="funid" href="http://www.baidu.com/">功能管理</a>
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        alert("您好！ 欢迎来到jQuery世界");
+        $("#funid").trigger("click");
+    });
+</script>
 </html>
+

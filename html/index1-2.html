@@ -1,32 +1,96 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>第一个简单的jQuery程序</title>
     <script language="javascript" type="text/javascript" src="../jquery/jquery-1.6.4.min.js"></script>
     <style type="text/css">
-        .divFrame{width: 260px; border: solid 1px #666; font-size: 10pt}
-        .divTitle{background-color: #eee; padding: 5px}
-        .divContent{padding:5px; display: none}
-        .divCurrColor{background-color: Red}
+        .divFrame {
+            width: 700px;
+            border: solid 5px #666;
+            font-size: 10pt;
+            padding: 5px;
+        }
+
+        .divTitle {
+            background-color: #eee;
+            padding: 5px
+        }
+
+        .divContent {
+            padding: 5px;
+            display: none
+        }
+
+        .divCurrColor {
+            background-color: Red
+        }
+
+        .fileUpload {
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .fileUpload input.upload {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
     </style>
-    <script type="text/javascript">
-        $(function() {
-            $(".divTitle".click(function() {
-                $(this).addClass("divCurrColor").next(".divContent").css("display", "block")
-            }))
-        });
-    </script>
 </head>
 <body>
-    <div class="divFrame">
-        <div class="divTitle">主题</div>
-        <div class="divContent">
-            <a href="#">连接1</a>
-            <a href="#">连接2</a>
-            <a href="#">连接3</a>
-        </div>
+<div class="divFrame">
+    <div class="divTitle">主题</div>
+    <div class="divContent">
+        <a href="#">连接1</a>
+        <a href="#">连接2</a>
+        <a href="#">连接3</a>
     </div>
+
+    <div>
+        <br/>
+        <input id="textId" type="text" value="Text Field"/>
+        <br/>
+        <label id="labelId">唐伯虎点秋香</label>
+        <label id="outlabel"></label>
+        <br/>
+    </div>
+</div>
+
+<div class="divFrame">
+    <input id="uploadFile" placeholder="Choose File" disabled="disabled"/>
+
+    <div class="fileUpload btn btn-primary">
+        <span>Upload</span>
+        <input id="uploadBtn" type="file" class="upload"/>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        document.getElementById("uploadBtn").onchange = function () {
+            document.getElementById("uploadFile").value = this.value;
+        };
+
+        $(".divTitle").click(function(){
+           $(this).addClass("divCurrColor").next(".divContent").css("display", "block");
+        });
+
+        $("#labelId").click(function(){
+            var tdiv = $("#labelId"); // 获取jquery对象
+            var odiv = $("#outlabel");
+            var cdiv = tdiv.html(); // 获取内容
+            odiv.html(cdiv); // 设置内容
+        });
+    });
+</script>
 </body>
 </html>

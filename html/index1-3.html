@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>控制DOM对象</title>
+    <script language="javascript" type="text/javascript" src="../jquery/jquery-1.6.4.min.js"></script>
+    <style type="text/css">
+        .divFrame {
+            width: 700px;
+            border: solid 5px #666;
+            font-size: 10pt;
+            padding: 5px;
+        }
+
+        .divTitle {
+            background-color: #eee;
+            padding: 5px
+        }
+
+        .divContent {
+            padding: 8px;
+            font-size: 9pt;
+        }
+        .divTip {
+            width: 244px;
+            border: solid 1px #666;
+            padding: 8px;
+            font-size: 9pt;
+            margin-top: 5px;
+            display: none;
+        }
+        .txtCss {
+            border: solid 1px #ccc;
+        }
+        .divBtn {
+            padding-top: 5px;
+        }
+        .divBtn .btnCss {
+            border: solid 1px #535353;
+            width: 80px;
+        }
+
+        .divCurrColor {
+            background-color: Red
+        }
+
+        .fileUpload {
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .fileUpload input.upload {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+           $("#Button1").click(function(){
+               var otxtValue= $("#Text1").val();
+               var ordoValue = $("#Radio1").is(":checked") ? "男" : "女";
+               var ochkValue = $("#Checkbox1").is("#checked") ? "已婚" : "未婚";
+               $("#divTip").css("display", "block").html(otxtValue + "<br>" + ordoValue + "<br>" + ochkValue);
+           });
+        });
+    </script>
+</head>
+<body>
+<div class="divFrame">
+    <div class="divTitle">请输入如下信息</div>
+    <div class="divContent">
+        姓名：<input id="Text1" type="text" class="txtCss"/><br/>
+        gender: <input id="Radio1" name="rdoSex" type="radio" value="男" />男
+        <input id="Radio2" name="rdoSex" type="radio" value="女" />女<br/>
+        married <input id="Checkbox1" type="checkbox"/>
+        <div class="divBtn">
+            <input id="Button1" type="button" value="commmit" class="btnCss"/>
+        </div>
+    </div>
+</div>
+
+<div id="divTip" class="divTip"></div>
+</body>
+</html>

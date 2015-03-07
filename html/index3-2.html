@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>获取元素属性</title>
+    <script language="javascript" type="text/javascript" src="../jquery/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var strAlt = $("img").attr("src");
+            strAlt += "<br/><br/>" + $("img").attr("title")
+            $("#divAlt").html(strAlt);
+        });
+    </script>
+</head>
+<body>
+<div class="clsFrame">
+    <h1>获取元素属性</h1>
+    <img alt="pic..." title="this is beautiful picture" src="../images/p01.jpg"/>
+    <div id="divAlt"></div>
+</div>
+</body>
+</html>

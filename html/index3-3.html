@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>设置元素属性</title>
+    <script language="javascript" type="text/javascript" src="../jquery/jquery-1.6.4.min.js"></script>
+    <style type="text/css">
+        .clsSpn{float:left; padding-top: 10px;padding-left: 10px;}
+        .clsImg{border: solid 1px #ccc; padding: 3px; float:left}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("img").attr("src", "../images/p02.jpg");
+            $("img").attr("title", "这是一幅风景画");
+
+            $("img").attr({src: "../images/p01.jpg", title: "这是一幅好看的画"});
+            $("img").addClass("clsImg");
+            $("span").html("加载完毕");
+        });
+    </script>
+</head>
+<body>
+    <img alt="pic" style="float:left" src="../images/p01.jpg"/>
+    <span class="clsSpn">正在加载图片...</span>
+</body>
+</html>
