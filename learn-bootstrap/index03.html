@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+混合使用网格类，根据设备大小自动选择布局css
+col-xs-6： 手机设备
+col-sm-8： 平板
+col-md-9： 普通桌面
+col-lg-10：大尺寸桌面
+-->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+
+    <title>Bootstrap 3</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-sm-8 col-md-9 col-lg-10">
+            <h1 class="page-header">主体部分</h1>
+            <p>
+                高可用性的逻辑卷管理器（HA-LVM）已经集成了LVM的套件。它提供共享卷一个故障转移的配置，
+                也就是说如果集群中的一台服务器出现故障或进行维护，共享存储配置将故障转移到辅助服务器上，
+                所有I / O请求将恢复，不间断的。HA-LVM配置是一个主/从配置。
+                这意味着在任何一个时间只有一个服务器访问共享存储。在许多情况下，这是一种理想的方法，
+                因为一些先进的LVM的功能，如快照和重复数据删除，在主/从环境下是不支持的（当多个服务器访问共享存储）。
+
+                CLVM(LVM集群的守护进程)是HA-LVM一个非常重要的组件。当启动HA-LVM后，
+                CLVM守护进程会防止有多台机器同时对共享存储做修 改，否则对LVM的元数据和逻辑卷会造成破坏。
+                尽管在采用主从配置时，这样的问题并不需要太多担心。要做到这一点，守护进程得依赖于分布锁管理器 (DLM).
+                DLM的目的也是协助CLVM访问磁盘。方
+            </p>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+            <h1 class="page-header">边栏</h1>
+            <p>
+                An interface for events that know how to dispatch themselves.
+                By implementing this interface an event can be placed upon the event queue
+                and its dispatch() method will be called when the event is dispatched, using the EventDispatchThread.
+                This is a very useful mechanism for avoiding deadlocks. If a thread is executing in a critical section
+                (i.e., it has entered one or more monitors), calling other synchronized code may cause deadlocks.
+                To avoid the potential deadlocks, an ActiveEvent can be created to run the second section of
+                code at later time. If there is contention on the monitor, the second thread
+                will simply block until the first thread has finished its work and exited its monitors.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="lib/jquery-2.1.3.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

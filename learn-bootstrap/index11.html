@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+导航栏中的文字，按钮与其他菜单
+-->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+
+    <title>Bootstrap 3</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><strong>pycoding</strong>.com</a>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Java</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">算法导论</a></li>
+        </ul>
+        <form action="" class="navbar-form navbar-left">
+            <input type="text" placeholder="搜索" class="form-control"/>
+            <button type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </form>
+        <a href="#" class="btn btn-primary btn-sm navbar-btn navbar-right">点我吧</a>
+        <div class="profile navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="">登录</a></li>
+                <li><a href="">注册</a></li>
+            </ul>
+            <p class="navbar-text">您好，<a href="#" class="navbar-link">一刀</a></p>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <p class="alert alert-info">
+        In order for assistive technologies – such as screen readers
+        – to convey that a series of buttons is grouped,
+        an appropriate role attribute needs to be provided.
+        For button groups, this would be role="group",
+        while toolbars should have a role="toolbar".
+        One exception are groups which only contain a single control
+        (for instance the justified button groups with
+        elements) or a dropdown.
+        In addition, groups and toolbars should be given an
+        explicit label, as most assistive technologies will
+        otherwise not announce them, despite the presence of
+        the correct role attribute. In the examples provided here,
+        we use aria-label, but alternatives such as aria-labelledby
+        can also be used.
+    </p>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <a class="navbar-brand" href="#"><strong>pycoding</strong>.com</a>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Java</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">算法导论</a></li>
+        </ul>
+    </div>
+</nav>
+<script src="lib/jquery-2.1.3.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
