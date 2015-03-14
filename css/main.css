@@ -1,0 +1,19 @@
+body {
+    color: blueviolet;
+}
+h1 {color:blue;}
+li strong {
+    color: red;
+}
+strong {
+    color: #000000;
+}
+#pid {
+    color: #28a4c9;
+}
+#pida a{
+    color: #4cae4c;
+}
+.pclass {
+    color: darkred;
+}

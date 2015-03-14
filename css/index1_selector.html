@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>CSS演示</title>
+    <style type="text/css">
+        [title] {
+            color: blue;
+        }
+
+        [title='te'] {
+            color: orangered;
+        }
+
+        a[href='haha'] {
+            color: #8a6d3b;
+        }
+    </style>
+</head>
+<body>
+<h1>看看效果</h1>
+
+<h2>继承body</h2>
+
+<h2>-------------派生选择器以及样式覆盖------------</h2>
+
+<p><strong>p标签hello css</strong></p>
+<ul>
+    <li><strong>li标签：Hello css</strong></li>
+</ul>
+
+<h2>---------------id选择器---------------</h2>
+
+<p id="pid">hello id选择器</p>
+
+<p id="pida"><a href="#">baidu....</a></p>
+
+
+<h3>-------------类选择器----------------</h3>
+
+<p class="pclass">这是一个class效果</p>
+
+<h3>-------------属性选择器----------------</h3>
+
+<p class="pclass">这是一个class效果</p>
+
+<p title="t">属性选择器1</p>
+
+<p title="te">属性值等于某个值的选择器2</p>
+<a href="haha">节点属性值选择器</a>
+</body>
+</html>

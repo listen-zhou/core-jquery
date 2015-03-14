@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS演示定位</title>
+    <style type="text/css">
+        #ps1 {
+            width: 100px;
+            height: 100px;
+            background-color: #269abc;
+            position: relative;
+            left:20px;
+            top:20px;
+            z-index: 2;
+        }
+        #ps2 {
+            width: 100px;
+            height: 100px;
+            background-color: #5bc0de;
+            position: relative;
+            left:10px;
+            top:10px;
+            z-index: 1;
+        }
+
+        #fd1 {
+            width:100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+        #fd2 {
+            width:150px;
+            height: 150px;
+            background-color: blue;
+            float: left;
+        }
+        #fd3 {
+            width:100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+
+        #big {
+            width: 300px;
+            height: 300px;
+            background-color: #bce8f1;
+        }
+    </style>
+</head>
+<body>
+<div id="ps1"></div>
+<div id="ps2"></div>
+<script>
+    for(var i=0; i<4;i++) {
+        document.write(i+"<br/>");
+    }
+</script>
+
+<div id="big">
+<div id="fd1"></div>
+<div id="fd2"></div>
+<div id="fd3"></div>
+</div>
+
+</body>
+</html>
